@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("bg-desktop-dark.jpg");
+    background-repeat: no-repeat;
+    background-color: black;
+    color: white;
+}
+
+body.light {
+    background-image: url("bg-desktop-light.jpg");
+    background-repeat: no-repeat;
+    background-color: hsl(0, 0%, 98%);
+    color: white;
+}
+
+.container {
+    max-width: 375px;
+    margin: 50px auto;
+}
+
+.head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.head h1 {
+    letter-spacing: 15px;
+}
+
+.head img {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.createtodo {
+    display: flex;
+    background: hsl(235, 24%, 19%);
+    align-items: center;
+    margin-bottom: 30px;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+body.light .createtodo {
+    background: white;
+}
+
+.input {
+    width: 100%;
+    height: 50px;
+    border: none;
+    background: hsl(235, 24%, 19%);
+    color: hsl(234, 39%, 85%);
+}
+
+input:focus {
+    outline: none;
+    border: none;
+}
+
+body.light .input {
+    color: hsl(235, 24%, 19%);
+    background: white;
+}
+
+.check {
+    border: 1px solid hsl(234, 39%, 85%);
+    margin-right: 10px;
+    margin-left: 10px;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    background: hsl(235, 24%, 19%);
+}
+
+body.light .check {
+    border: 1px solid hsl(235, 24%, 19%);
+    background: white;
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.info p {
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+body.light .info p {
+    color: black;
+}
+
+.status {
+    display: flex;
+    gap: 10px;
+}
+
+.todo > div:first-child {
+    border-radius: 6px 6px 0 0;
+}
+
+.todo > div:not(:first-child) {
+    border-radius: 0;
+}
+
+.todo > div:last-child {
+    border-radius: 0 0 6px 6px;
+    border: none !important;
+}
